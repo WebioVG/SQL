@@ -48,8 +48,7 @@ WHERE DATE_VENTE = "2014/01/15 00:00:00"
 SELECT NUMERO_TICKET
 FROM ticket
 WHERE DATE_VENTE
-BETWEEN "2014/01/15 00:00:00"
-AND "2014/01/17 00:00:00"
+BETWEEN "2014/01/15 00:00:00" AND "2014/01/17 00:00:00"
 ```
 
 ### Editer la liste des articles apparaissant à 50 et plus exemplaires sur un ticket.
@@ -57,7 +56,7 @@ AND "2014/01/17 00:00:00"
 ```mysql
 SELECT ventes.ID_ARTICLE
 FROM ventes
-INNER JOIN article ON ventes.ID_ARTICLE = article.ID_ARTICLE
+JOIN article ON ventes.ID_ARTICLE = article.ID_ARTICLE
 WHERE ventes.QUANTITE >= 50
 ```
 
@@ -76,7 +75,7 @@ AND MONTH(DATE_VENTE) = 3
 SELECT NUMERO_TICKET
 FROM ticket
 WHERE YEAR(DATE_VENTE) = 2014
-AND MONTH(DATE_VENTE) BETWEEN 3 AND 6
+AND MONTH(DATE_VENTE) IN (3, 4)
 ```
 
 ### Quelles sont les tickets émis au mois de mars et juin 2014 ?
@@ -91,9 +90,9 @@ AND MONTH(DATE_VENTE) IN (3, 6)
 ### Afficher la liste des bières classée par couleur. (Afficher l’id et le nom)
 
 ```mysql
-SELECT ID_ARTICLE, NOM_ARTICLE
+SELECT ID_ARTICLE, NOM_ARTICLE, NOM_COULEUR
 FROM article
-INNER JOIN couleur ON article.ID_Couleur = couleur.ID_Couleur
+JOIN couleur ON article.ID_Couleur = couleur.ID_Couleur
 ORDER BY couleur.NOM_COULEUR
 ```
 
