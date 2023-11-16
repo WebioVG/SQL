@@ -16,9 +16,11 @@ formateur de vous aider ou de vous donner le docker-compose.
 ### Effectuez un reverse engineering du modèle
 
 - Quelles sont les tables ?
+article, type, couleur, ventes, ticket, marque, fabricant, pays, continent
 
 ### Il y a des mauvaises pratiques dans ce modèle, lesquelles ?
-
+Les noms des variables ne sont pas cohérents : tout est en majuscule sauf ID_Couleur.
+Les noms des tables sont tous au singulier sauf "ventes".
 
 ## Exercices
 
