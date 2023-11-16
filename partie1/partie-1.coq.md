@@ -46,8 +46,8 @@ WHERE DATE_VENTE = "2014/01/15 00:00:00"
 SELECT NUMERO_TICKET
 FROM ticket
 WHERE DATE_VENTE
-	BETWEEN "2014/01/15 00:00:00"
-    AND "2014/01/17 00:00:00"
+BETWEEN "2014/01/15 00:00:00"
+AND "2014/01/17 00:00:00"
 ```
 
 ### Editer la liste des articles apparaissant à 50 et plus exemplaires sur un ticket.
